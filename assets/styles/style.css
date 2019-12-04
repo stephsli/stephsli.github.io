@@ -1,0 +1,408 @@
+/* Set Up */
+body {
+  margin: 0px;
+  background: #ffffff;
+  height: 100%;
+}
+
+@font-face {
+  font-family: Imperial; src: url("../fonts/ImperialRoundRegular.ttf");
+}
+
+@font-face {
+  font-family: Reservoir; src:url("../fonts/ReservoirGrunge.ttf");
+}
+
+/* Home */
+.hero {
+  background-image: url('../img/h-hero.png');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes slide {
+  100% {transform: translateX(-100%); }
+}
+
+@keyframes appear {
+  0% {opacity: 0; }
+  100% {opacity: 1; }
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-image: url('../img/h-goodfaith.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  position: absolute;
+}
+
+.h-nav {
+  width: 60px;
+  background: #0C1725;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+
+  animation-name: appear;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: space-between;
+}
+
+.h-hero-txt h1 {
+  font-family: Reservoir;
+  font-size: 45;
+  color: #0C1725;
+  opacity: 0;
+
+  animation-name: appear;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+}
+
+#h-button {
+  opacity: 0;
+
+  animation-name: appear;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+}
+
+#button-scaled {
+  width: 260px;
+}
+
+/* Second Home */
+.hero-txt h1 {
+  font-family: Reservoir;
+  font-size: 45;
+  color: #0C1725;
+}
+
+/* Normal Nav */
+
+.nav {
+  width: 60px;
+  background: #0C1725;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: space-between;
+}
+
+.nav-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav-logo {
+  padding-bottom: 7px;
+}
+
+.nav-about {
+  padding-top: 7px;
+}
+
+#about-txt {
+  font-family: Imperial;
+  color: #D9DADF;
+  padding-top: 3px;
+  font-size: 13;
+}
+
+#about-scaled {
+  width: 46px;
+}
+
+#logo-scaled {
+  width: 56px;
+}
+
+/* Songs Main */
+
+.s-content {
+  height: 70%;
+  width: 75%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.s-content h1 {
+  font-family: Reservoir;
+  font-size: 50px;
+  color: #0C1725;
+  margin-top: 20px;
+}
+
+.s-content h3 {
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+  font-weight: 700;
+  color: #0C1725;
+  margin-top: 5px;
+}
+
+.s-content p {
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: 500;
+  color: #0C1725;
+  margin-bottom: 0;
+}
+
+.credits {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.credit2 {
+  position: absolute;
+  left: 50%;
+}
+
+.title h1:hover {
+  animation-name: chg-color;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+/* Songs Nav */
+/* dropdown code modified from here: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover */
+.dropbutton {
+  background-color: transparent;
+  color: #0C1725;
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 5px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropcontent {
+  display: none;
+  position: absolute;
+  background-color: rgba(219, 218, 224, 0.65);
+  min-width: 60px;
+  z-index: 1;
+}
+
+.dropcontent a {
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #0C1725;
+
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropcontent a:hover {
+  background-color: rgba(219, 218, 224, 0.8);
+}
+
+.dropdown:hover .dropcontent {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #0C1725;
+}
+
+/* Diff Songs */
+#dreamx3 {
+  width: 100%;
+  height: 100%;
+  background-color: #00EAF1;
+}
+
+#amf {
+  width: 100%;
+  height: 100%;
+  background-color: #F9DD72;
+}
+
+#bf {
+  width: 100%;
+  height: 100%;
+  background-color: #82F441;
+}
+
+#nirvana {
+  width: 100%;
+  height: 100%;
+  background-color: #B271FF;
+}
+
+#mania {
+  width: 100%;
+  height: 100%;
+  background-color: #E13B63;
+}
+
+#miracle {
+  width: 100%;
+  height: 100%;
+  background-color: #0001FF;
+}
+
+#nfnm {
+  width: 100%;
+  height: 100%;
+  background-color: #ED71DE;
+}
+
+#holdme {
+  width: 100%;
+  height: 100%;
+  background-color: #85F7AE;
+}
+
+#heavy {
+  width: 100%;
+  height: 100%;
+  background-color: #F2ACCE;
+}
+
+#borealis {
+  width: 100%;
+  height: 100%;
+  background-color: #0097FE;
+}
+
+/* About */
+
+#a-all {
+  width: 100%;
+  height: 100%;
+  background-color: #FDFDFD;
+}
+
+.a-content {
+  height: 60%;
+  width: 75%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+blockquote {
+  font-family: Reservoir;
+  font-size: 40px;
+  color: #0C1725;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+
+  animation-name: chg-color;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes chg-color {
+  10% {color: #00EAF1;}
+	20% {color: #F9DD72;}
+	30% {color: #82F441;}
+	40% {color: #B271FF;}
+	50% {color: #E13B63;}
+  60% {color: #0001FF;}
+  70% {color: #ED71DE;}
+	80% {color: #85F7AE;}
+	90% {color: #F2ACCE;}
+	100% {color: #0097FE;}
+}
+
+#q1 h1 {
+  font-family: Reservoir;
+  font-size: 40px;
+  color: #0C1725;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+h4 {
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: 700;
+  color: #0C1725;
+  margin-top: 20px;
+}
+
+.a-content p {
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: 500;
+  color: #0C1725;
+  margin-bottom: 20px;
+}
+
+.a-content a:link {
+  color: #00EAF1;
+  text-decoration: none;
+}
+
+.a-content a:visited {
+  color: #00EAF1;
+}
+
+.a-content a:hover {
+  color: #85F7AE;
+}
